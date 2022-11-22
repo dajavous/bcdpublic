@@ -1,0 +1,6 @@
+openpyxl
+panda
+streamlit_aggrid
+numpy
+js2py
+
