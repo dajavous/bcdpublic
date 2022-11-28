@@ -12,7 +12,7 @@ def init_style():
 
     .streamlit-expanderHeader {
         font-weight :600;
-        font-size:'large';
+        font-size:100%;
         padding-top:0px;
         padding-left: 0px;
         color:red;
@@ -42,7 +42,7 @@ def read_sheet():
 
 df = read_sheet()
 
-with st.expander("**   Help on using the BCD Magazines - searching Article Contents**", expanded=True):
+with st.expander("**Help on using the BCD Magazines - searching Article Contents**", expanded=True):
        st.write("""
 	- Using the column headings, you can sort by clicking on a heading, rearrange columns and
 	  change column widths by clicking and dragging, and remove columns by dragging off the page.
