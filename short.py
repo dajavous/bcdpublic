@@ -35,9 +35,8 @@ with st.expander("**Help on using the BCD Magazines - Full Text Index**", expand
 
 hvar = """  <script>
 			var elements = window.parent.document.querySelectorAll('.streamlit-expanderHeader');
-			elements[0].style.fontSize = 'large';
-			elements[0].style.fontWeight = 'bold';
-	    </script>"""
+			elements[0].style.fontSize = 20px;
+	     </script>"""
 
 components.html(hvar, height=0, width=0)
 
