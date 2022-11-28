@@ -11,8 +11,6 @@ def init_style():
     <style>
 
 .streamlit-expanderHeader {
-        font-style: normal;
-        font-weight :1000;
         font-size:22px;
 
     </style>
