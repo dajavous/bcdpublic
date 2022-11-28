@@ -11,15 +11,9 @@ def init_style():
     <style>
 
 .streamlit-expanderHeader {
-        font-style: italic;
-        font-weight :600;
-        font-size:16px;
-        padding-top:0px;
-        padding-left: 0px;
-        color:#A29C9B
-
-
-
+        font-style: normal;
+        font-weight :1000;
+        font-size:22px;
 
     </style>
 """,
