@@ -4,6 +4,29 @@ st.set_page_config(page_title="Article contents",page_icon="bcdlogo.png")
 import streamlit.components.v1 as components
 import numpy as np
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode, JsCode
+
+def init_style():
+    return st.markdown(
+        """
+    <style>
+
+.streamlit-expanderHeader {
+        font-style: italic;
+        font-weight :600;
+        font-size:16px;
+        padding-top:0px;
+        padding-left: 0px;
+        color:#A29C9B
+
+
+
+
+    </style>
+""",
+        unsafe_allow_html=True,
+    )
+
+
 col1, col2 = st.columns([1,1])
 with col1:
 	st.image('BCD-transparent-background-75.png')
