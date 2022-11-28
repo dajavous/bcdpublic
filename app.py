@@ -23,7 +23,7 @@ def read_sheet():
 
 df = read_sheet()
 
-with st.expander("Help on using the BCD Magazines - searching Article Contents", expanded=True):
+with st.expander(**"Help on using the BCD Magazines - searching Article Contents"**, expanded=True):
        st.write("""
 	- Using the column headings, you can sort by clicking on a heading, rearrange columns and
 	  change column widths by clicking and dragging, and remove columns by dragging off the page.
