@@ -56,6 +56,8 @@ with st.expander("**Help on using the BCD Magazines - searching Article Contents
 	- Click on "Help on using the Index" above to open or close this help box.
      """)
 
+init_style()
+
 #hvar = """  <script>
 #			var elements = window.parent.document.querySelectorAll('.streamlit-expanderHeader');
 #			elements[0].style.fontSize = 'large';
