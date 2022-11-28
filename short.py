@@ -22,7 +22,7 @@ def read_sheet():
 
 df = read_sheet()
 
-with st.expander("Help on using the BCD Magazines - Full Text Index", expanded=True):
+with st.expander("**Help on using the BCD Magazines - Full Text Index**", expanded=True):
        st.write("""
 	- Hover over a column heading and click on the three-bar menu that appears in the column 
 	  heading (or just long press on the heading with a tablet) to open the column search box.
