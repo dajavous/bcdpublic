@@ -1,6 +1,6 @@
 [global]
 [theme]
-primaryColor="#8AD1A2"
+primaryColor="red"
 backgroundColor="blanchedalmond"
 secondaryBackgroundColor="#FFFFFC"
 textColor="##666665"
