@@ -11,6 +11,7 @@ def init_style():
     <style>
 
     .streamlit-expanderHeader {
+    	font-style:normal;
         color:red;
     </style>
 """,
