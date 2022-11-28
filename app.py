@@ -12,7 +12,7 @@ def init_style():
 
     .streamlit-expanderHeader {
         font-weight:bold;
-        font-size:3em;
+        font-size:1.5em;
         padding-top:0px;
         padding-left: 0px;
         color:red;
