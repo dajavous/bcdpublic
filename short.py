@@ -4,6 +4,22 @@ import pandas as pd
 import streamlit.components.v1 as components
 import numpy as np
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode, JsCode
+
+def init_style():
+    return st.markdown(
+        """
+    <style>
+
+    .streamlit-expanderHeader {
+        color:red;
+    </style>
+""",
+        unsafe_allow_html=True,
+    )
+
+init_style()
+
+
 st.set_page_config(page_title="Full text index",page_icon="bcdlogo.png", layout="centered", initial_sidebar_state="auto", menu_items=None)
 col1, col2 = st.columns([1,1])
 with col1:
