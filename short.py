@@ -33,12 +33,12 @@ with st.expander("**Help on using the BCD Magazines - Full Text Index**", expand
 	- Click on "Help on using the Index" above to open or close this help box.
      """)
 
-hvar = """  <script>
-			var elements = window.parent.document.querySelectorAll('.streamlit-expanderHeader');
-			elements[0].style.fontSize='20px';
-	     </script>"""
-
-components.html(hvar, height=0, width=0)
+#hvar = """  <script>
+#			var elements = window.parent.document.querySelectorAll('.streamlit-expanderHeader');
+#			elements[0].style.fontSize='20px';
+#	     </script>"""
+#
+#components.html(hvar, height=0, width=0)
 
 gb = GridOptionsBuilder.from_dataframe(df)
 #gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
