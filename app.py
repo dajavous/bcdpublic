@@ -26,6 +26,7 @@ def init_style():
         unsafe_allow_html=True,
     )
 
+init_style()
 
 col1, col2 = st.columns([1,1])
 with col1:
