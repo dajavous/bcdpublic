@@ -13,10 +13,9 @@ def init_style():
     .streamlit-expanderHeader {
         color:#206b02;
 	}
-.css-184tjsw p {
-    font-size: 20px;
-    
-}
+    .css-184tjsw p {
+        font-size: 20px;
+        }
     </style>
 """,
         unsafe_allow_html=True,
@@ -57,17 +56,7 @@ with st.expander("**Help on using the BCD Magazines - Article Contents**", expan
 	- Click on "Help on using the Index" above to open or close this help box.
      """)
 
-#hvar = """  <script>
-#			var elements = window.parent.document.querySelectorAll('.streamlit-expanderHeader');
-#			elements[0].style.fontSize = 'large';
-#			elements[0].style.fontWeight = 'bold';
-#	    </script>"""
-#
-#components.html(hvar, height=0, width=0)
-
 gb = GridOptionsBuilder.from_dataframe(df)
-#gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
-#gb.configure_side_bar()
 
 gb.configure_default_column(wrapText=True, autoHeight=True, cellStyle={'word-break': 'break-word'})
 gb.configure_column("ISSUE",
@@ -87,9 +76,6 @@ gb.configure_column("ARTICLE",
 gb.configure_column("AUTHOR",
                             headerName="AUTHOR",
                             width=300)
-
-#gb.configure_column("KEYWORDS", headerName="KEYWORDS", sortable=False)
-#gb.configure_column("ARTICLE", headerName="ARTICLE", sortable=False)
 
 gridOptions = gb.build()
 
