@@ -17,11 +17,9 @@ def init_style():
         color:#206b02;
     }
     .css-184tjsw p {
-    font-size: 20px;
-}
-	
-	
-	}
+        font-size: 20px;
+    }
+    
     </style>
 """,
         unsafe_allow_html=True,
@@ -58,17 +56,8 @@ with st.expander("**Help on using the BCD Magazines - Full Text Index**", expand
 	- Click on "Help on using the Index" above to open or close this help box.
      """)
 
-#hvar = """  <script>
-#			var elements = window.parent.document.querySelectorAll('.streamlit-expanderHeader');
-#			elements[0].style.fontSize='20px';
-#	     </script>"""
-#
-#components.html(hvar, height=0, width=0)
-
 gb = GridOptionsBuilder.from_dataframe(df)
-#gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
-#gb.configure_side_bar()
-
+  
 gb.configure_default_column(wrapText=True, autoHeight=True, cellStyle={'word-break': 'break-word'})
 
 
@@ -83,12 +72,6 @@ gb.configure_column("pages",
                             headerName="PAGES",
                             width=400)
            
-
-#gb.configure_column("word", headerName="word", Width=75)
-#gb.configure_column("pages", headerName="pages", Width=50)
-
-#gb.configure_default_column(
-#        min_column_width=50)
 
 gridOptions = gb.build()
 
