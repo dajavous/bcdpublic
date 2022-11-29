@@ -12,10 +12,11 @@ def init_style():
 
     .streamlit-expanderHeader {
         color:#206b02;
-	
+	}
 .css-184tjsw p {
     word-break: break-word;
     font-size: 20px;
+    
 }
     </style>
 """,
