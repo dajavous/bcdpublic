@@ -16,9 +16,6 @@ def init_style():
     .streamlit-expanderHeader {
         color:#206b02;
 	}
-	.stMarkdownContainer {
-	font-size: 20px;
-	}
     </style>
 """,
         unsafe_allow_html=True,
