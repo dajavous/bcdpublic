@@ -11,7 +11,7 @@ def init_style():
     <style>
 
     .streamlit-expanderHeader {
-        color:#8AD1A2;
+        color:#0FBE7C;
 	}
     .css-184tjsw p {
         font-size: 20px;
