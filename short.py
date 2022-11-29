@@ -17,7 +17,6 @@ def init_style():
         color:#206b02;
     }
     .css-184tjsw p {
-    word-break: break-word;
     font-size: 20px;
 }
 	
