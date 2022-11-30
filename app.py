@@ -1,9 +1,17 @@
+# BCD Library Contents Pages Search for BCD Members site
+
 import pandas as pd
 import streamlit as st
+
+# Sets page title and favicon for browser tab
+
 st.set_page_config(page_title="Article contents",page_icon="bcdlogo.png")
+
 import streamlit.components.v1 as components
 import numpy as np
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode, JsCode
+
+# Changes colour and increases font size of help box label / link consistent with BCD Members site
 
 def init_style():
     return st.markdown(
@@ -23,6 +31,8 @@ def init_style():
 
 init_style()
 
+# Splits heading into two columns for BCD logo and page headings
+
 col1, col2 = st.columns([1,1])
 with col1:
 	st.image('BCD-transparent-background-75.png')
@@ -30,8 +40,14 @@ with col1:
 with col2:
 	st.subheader("BCD Magazines")
 	st.subheader("Article Contents")
+	
+# Defines data for searching, imported from Excel sheet	
+	
 excel_file = 'Newsletter-and-Magazine-Index.xlsx'
 sheet_name = 'Sheet1'
+
+# Defines caching time for page, to keep results live for long enough
+# Reads in the Excel sheet using columns A to E
 
 @st.cache(ttl=24*3600)
 def read_sheet():
@@ -41,6 +57,8 @@ def read_sheet():
 				   header=0)
 
 df = read_sheet()
+
+# Sets up the content of the help box, using ** Markdown code for bold text
 
 with st.expander("**Help on using the BCD Magazines - Article Contents**", expanded=True):
        st.write("""
@@ -56,9 +74,14 @@ with st.expander("**Help on using the BCD Magazines - Article Contents**", expan
 	- Click on "Help on using the Index" above to open or close this help box.
      """)
 
+# Defines the options and data labels for the AgGrid table display
+
 gb = GridOptionsBuilder.from_dataframe(df)
 
 gb.configure_default_column(wrapText=True, autoHeight=True, cellStyle={'word-break': 'break-word'})
+
+# Changes the Issue number column to a hyperlink to the magazine - for BCD Members only, who are logged in and validated
+
 gb.configure_column("ISSUE",
                             headerName="ISSUE", 
                             cellRenderer=JsCode('''function(params) {return '<a href="https://thebcd.co.uk/bcd_members_only/issue-' + params.value + '" target="_blank">'+ params.value+'</a>'}'''),
@@ -80,6 +103,8 @@ gb.configure_column("AUTHOR",
 gridOptions = gb.build()
 
 app_update_mode = GridUpdateMode.FILTERING_CHANGED|GridUpdateMode.SORTING_CHANGED|GridUpdateMode.MODEL_CHANGED
+
+# Displays the AgGrid datatable of the imported Excel sheet, and the theme etc. for the display
 
 grid_response = AgGrid(
     df,
