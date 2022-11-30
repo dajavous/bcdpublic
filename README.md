@@ -10,7 +10,8 @@ https://www.pdfindexgenerator.com/ was used to batch process the OCRd pdfs for t
 
 The OCRd pdfs were batch processed in Nitro PDF Pro: (https://www.gonitro.com/) for the BCD Newsletters and Magazines. 
 
-Provides a hyperlink to the magazines for logged in and validated BCD members.
+Provides a hyperlink to the magazines for logged in and validated BCD members, and styles the page consistent with the Members
+website using the config.toml file in folder .streamlit, plus css in the app.py and short.py code.
 
 https://www.thebcd.co.uk
 
