@@ -1,11 +1,16 @@
+# BCD Library Full Text Index Search for BCD Members site
+
 import streamlit as st
 import pandas as pd
 import streamlit.components.v1 as components
 import numpy as np
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode, JsCode
 
+# Sets page title and favicon for browser tab
+
 st.set_page_config(page_title="Full text index",page_icon="bcdlogo.png", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
+# Changes colour and increases font size of help box label / link consistent with BCD Members site
 
 def init_style():
     return st.markdown(
@@ -26,6 +31,7 @@ def init_style():
 
 init_style()
 
+# Splits heading into two columns for BCD logo and page headings
 
 col1, col2 = st.columns([1,1])
 with col1:
@@ -34,15 +40,22 @@ with col1:
 with col2:
 	st.subheader("BCD Magazines")
 	st.subheader("Full Text Index")
+	
+# Defines data for searching, imported from Excel csv file	
 
 excel_file = 'full_index.csv'
 sheet_name = 'sheet1'
+
+# Defines caching time for page, to keep results live for long enough
+# Reads in the Excel csv file
 
 @st.cache(ttl=24*3600)
 def read_sheet():
      return pd.read_csv(excel_file)
 
 df = read_sheet()
+
+# Sets up the content of the help box, using ** Markdown code for bold text
 
 with st.expander("**Help on using the BCD Magazines - Full Text Index**", expanded=True):
        st.write("""
@@ -55,10 +68,13 @@ with st.expander("**Help on using the BCD Magazines - Full Text Index**", expand
 	- Click on "Help on using the Index" above to open or close this help box.
      """)
 
+# Defines the options and data labels for the AgGrid table display
+
 gb = GridOptionsBuilder.from_dataframe(df)
   
 gb.configure_default_column(wrapText=True, autoHeight=True, cellStyle={'word-break': 'break-word'})
 
+# Changes the Issue number column to a hyperlink to the magazine - for BCD Members only, who are logged in and validated
 
 gb.configure_column("issue",
                             headerName="ISSUE",
@@ -75,6 +91,8 @@ gb.configure_column("pages",
 gridOptions = gb.build()
 
 app_update_mode = GridUpdateMode.FILTERING_CHANGED|GridUpdateMode.SORTING_CHANGED|GridUpdateMode.MODEL_CHANGED
+
+# Displays the AgGrid datatable of the imported Excel csv file, and the theme etc. for the display
 
 grid_response = AgGrid(
     df,
