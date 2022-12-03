@@ -57,7 +57,7 @@ df = read_sheet()
 
 # Sets up the content of the help box, using ** Markdown code for bold text
 
-with st.expander("**Help on using the BCD Magazines - Full Text Index**", expanded=True):
+with st.expander("**Help on using the BCD Magazines - Full Text Index Search**", expanded=True):
        st.write("""
 	- Hover over a column heading and click on the three-bar menu that appears in the column 
 	  heading (or just long press on the heading with a tablet) to open the column search box.
