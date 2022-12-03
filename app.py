@@ -60,7 +60,7 @@ df = read_sheet()
 
 # Sets up the content of the help box, using ** Markdown code for bold text
 
-with st.expander("**Help on using the BCD Magazines - Article Contents**", expanded=True):
+with st.expander("**Help on using the BCD Magazines - Article Contents Search**", expanded=True):
        st.write("""
 	- Using the column headings, you can sort by clicking on a heading, rearrange columns and
 	  change column widths by clicking and dragging, and remove columns by dragging off the page.
