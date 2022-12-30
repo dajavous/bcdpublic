@@ -42,7 +42,7 @@ with col2:
 	
 # Defines data for searching, imported from Excel csv file	
 
-excel_file = 'full_index.xlsx'
+excel_file = 'full_index2.csv'
 sheet_name = 'sheet1'
 
 # Defines caching time for page, to keep results live for long enough
