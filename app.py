@@ -43,7 +43,7 @@ with col2:
 	
 # Defines data for searching, imported from Excel sheet	
 	
-excel_file = 'Newsletter-and-Magazine-Index.xlsx'
+excel_file = 'article_contents_sheet.xlsx'
 sheet_name = 'Sheet1'
 
 # Defines caching time for page, to keep results live for long enough
