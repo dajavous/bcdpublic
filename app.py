@@ -84,7 +84,6 @@ gb.configure_default_column(wrapText=True, autoHeight=True, cellStyle={'word-bre
 
 gb.configure_column("ISSUE",
                             headerName="ISSUE", 
-                            cellRenderer=JsCode('''function(params) {return '<a href="https://thebcd.co.uk/bcd_members_only/issue-' + params.value + '" target="_blank">'+ params.value+'</a>'}'''),
                             width=200)
 gb.configure_column("PAGE",
                             headerName="PAGE",
