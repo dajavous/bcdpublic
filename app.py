@@ -60,8 +60,6 @@ df = read_sheet()
 
 # Sets up the content of the help box, using ** Markdown code for bold text
 
-url = "https://github.com/dajavous/bcdpublic/edit/main/app.py"
-
 with st.expander("**Help on using the BCD Magazines - Article Contents Search**", expanded=True):
        st.write("""
 	- Using the column headings, you can sort by clicking on a heading, rearrange columns and
@@ -74,7 +72,6 @@ with st.expander("**Help on using the BCD Magazines - Article Contents Search**"
 	- Note that page numbers are those printed on the page, not those in the pdf viewer.
 	- Logged in BCD Members can click on the Issue number to open the Magazine in another tab.
 	- Click on "Help on using the Index" above to open or close this help box.
-	- [Source Code at GitHub]
      """)
 
 # Defines the options and data labels for the AgGrid table display
