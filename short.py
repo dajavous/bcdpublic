@@ -75,9 +75,14 @@ gb.configure_default_column(wrapText=True, autoHeight=True, cellStyle={'word-bre
 
 # Changes the Issue number column to a hyperlink to the magazine - for BCD Members only, who are logged in and validated
 
-gb.configure_column("issue",
-                            headerName="ISSUE",
-                            width=100)
+#gb.configure_column("issue",
+#                            headerName="ISSUE",
+#                            width=100)
+
+gd.configure_column("issue", headerName="ISSUE", cellRenderer=JsCode('''function(params) {return '<a href="https://drive.google.com/file/d/' + params.value + '/view" target="_blank">' + params.value + '</a>'}'''),
+                width=300)
+
+
 gb.configure_column("word",
                             headerName="WORD",
                             width=300)
