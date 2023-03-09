@@ -71,7 +71,7 @@ with st.expander("**Help on using the BCD Magazines - Full Text Index Search**",
 
 gb = GridOptionsBuilder.from_dataframe(df)
   
-#gb.configure_default_column(wrapText=True, autoHeight=True, cellStyle={'word-break': 'break-word'})
+gb.configure_default_column(wrapText=True, autoHeight=True, cellStyle={'word-break': 'break-word'})
 
 # Changes the Issue number column to a hyperlink to the magazine - for BCD Members only, who are logged in and validated
 
