@@ -74,7 +74,7 @@ with st.expander("**Help on using the BCD Magazines - Article Contents Search**"
 	- Note that page numbers are those printed on the page, not those in the pdf viewer.
 	- Logged in BCD Members can click on the Issue number to open the Magazine in another tab.
 	- Click on "Help on using the Index" above to open or close this help box.
-	- [Source Code at GitHub](%s) % url
+	- [Source Code at GitHub]
      """)
 
 # Defines the options and data labels for the AgGrid table display
